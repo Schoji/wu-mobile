@@ -1,6 +1,12 @@
+import { Collapsible } from '@/components/Collapsible';
+import { ThemedView } from '@/components/ThemedView';
+import { gradientColors } from '@/constants/Colors';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useRef, useState } from 'react';
-import { StyleSheet, Platform, View, Text, Button, ScrollView } from 'react-native';
+import { StyleSheet, Platform, View, Text, Button} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import WebView from 'react-native-webview';
+import { Avatar, AvatarImage, Card, H1, H3, XStack, ScrollView, YStack, Progress, ProgressIndicator } from 'tamagui';
 
 export default function HomeScreen() {
 
@@ -119,64 +125,153 @@ const webViewRef = useRef<WebView>(null);
 const [webViewSource, setWebViewSource] = useState({ uri: 'https://wu.pm.szczecin.pl/' });
 const [grades, setGrades] = useState([]);
 const [isHidden, setIsHidden] = useState(false);
+const [dataLoadingState, setDataLoadingState] = useState(false)
+const [dataLoadingProgress, setDataLoadingProgress] = useState(0)
 
-const handleMessage = (event) => {
+const handleMessage = (event: { nativeEvent: { data: any; }; }) => {
     const message = event.nativeEvent.data;
-    console.log('Message from WebView:', message);
     
     if (message.startsWith('[')) {
+      console.log("Got grades.")
+      setDataLoadingProgress(100)
+      // console.log('Message from WebView:', message);
+      slowHideProgressBar()
       setGrades(JSON.parse(message));
       setIsHidden(true);
     }
     
 };
 
+const slowHideProgressBar = () => {
+  setTimeout(() => {
+    setDataLoadingState(false)
+  }, 1500)
+}
+
+const progressStages = {
+  "https://idp.pm.szczecin.pl/External/Callback" : 10,
+  "https://wu.pm.szczecin.pl/WU/LoginIdentity.aspx" : 20,
+  "https://wu.pm.szczecin.pl/WU/Pusta.aspx" : 30,
+  "https://wu.pm.szczecin.pl/WU/Grades.aspx": 60,
+}
+  
+  
+
+
 return (
   <View style = {styles.root}>
-    <View style={!isHidden ? styles.webview : styles.hidden}>
+    <SafeAreaView style={!isHidden ? styles.webview : styles.hidden}>
       <WebView
         ref={webViewRef}
         source={webViewSource}
         javaScriptEnabled={true}
         onMessage={handleMessage}
         injectedJavaScript={injectedJavaScript}
+        onLoadStart={(state) => {
+          const { nativeEvent } = state
+          const url = nativeEvent.url
+
+          if (dataLoadingState == true) {
+            if (progressStages.hasOwnProperty(nativeEvent.url)) {
+              setDataLoadingProgress(Number(progressStages[nativeEvent.url as keyof typeof progressStages]))
+            }
+          }
+          if (nativeEvent.url == "https://wu.pm.szczecin.pl/wu/") {
+            setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
+          }
+          if (nativeEvent.url == "https://idp.pm.szczecin.pl/o365") {
+            setIsHidden(true)
+            setDataLoadingState(true)
+            console.log("Loading grades...")
+          }
+        }
+
+        }
         onNavigationStateChange={(navState) => {
+
           if (navState.url == "https://wu.pm.szczecin.pl/WU/Pusta.aspx") {
             console.log("changing urls..")
             setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
           }
         }}
       />
-     </View>
+     </SafeAreaView>
     <View style={isHidden ? styles.grades : styles.hidden}>
       
-      <Text style={styles.headerText}>Grades</Text>
-      <ScrollView>
-        {grades.map((semester, index) => 
-          <View key={index} style={styles.card}>
-            <Text style={styles.semesterText}>{semester.Structure}</Text>
-            {semester.Grades.map((subject, index) => (
-              <View key={index} style={styles.collapsible}>
-                <Text style={styles.subjectName}>{subject.SubjectName}</Text>
-                {subject.Subjects.map((subjectType, index) => (
-                  <View key={index} style={styles.subjectDetails}>
-                    <Text>Termin I: {subjectType["Termin I"]}</Text>
-                    <Text>Liczba godzin: {subjectType["Liczba godzin"]}</Text>
+      
+      <ThemedView style={styles.appBackground}>
+      <LinearGradient
+        colors={gradientColors}
+        style={styles.appBackground}
+      />
+      <SafeAreaView style={styles.appContent}>
+        <ScrollView> 
+          <XStack margin={10} justifyContent='space-between' alignItems='center'>
+            <H1 style={{fontSize: 32, fontWeight: 'bold'}}>
+              Hi, Stella
+            </H1>
+            <Avatar circular size={48} style={{borderWidth: 3, borderColor: 'white'}}>
+              <AvatarImage
+                src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
+              />
+            </Avatar>
+          </XStack>
+          <H3 style={{marginLeft: 10, fontSize: 18, fontWeight: 'bold'}}>Your grades</H3>
+          <ThemedView style={{backgroundColor: "white", borderRadius: 20, padding: 5, minHeight: "150%"}}>
+            {grades.map((semester, index) => 
+              <Collapsible title={semester.Semester} key={index}>
+                <View style={styles.card}>
+                {semester.Grades.map((subject, index) => (
+                  <View key={index} style={styles.grade}>
+                    <XStack>
+                      <YStack flex={2}>
+                        <H3 style={{ fontSize: 16, lineHeight: 30}}>{subject.SubjectName}</H3>
+                        <H3 style={{ fontSize: 14, color: "gray", lineHeight: 20}}>Punkty ECTS: {subject.Subjects[subject.Subjects.length - 1]["Punkty ECTS"]}</H3>
+                        <XStack alignItems='center' marginTop={20} gap={5}>
+                          <Avatar circular size={24}>
+                            <AvatarImage
+                              src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
+                            />
+                          </Avatar>
+                          <H3 style={{ lineHeight: 30, fontSize: 14, color: "gray"}}>
+                            {subject.Subjects[subject.Subjects.length - 1]["Prowadzący"]}
+                          </H3>
+                        </XStack>
+                      </YStack>
+                      <YStack flex={1} justifyContent='center' alignItems='center'>
+                        <H3 style={{ lineHeight: 70, fontSize: 64, fontStyle: "semibold"}}>{parseFloat(subject.Subjects[subject.Subjects.length - 1]["Termin I"].replace(",", "."))}</H3>
+                      </YStack>
+                    </XStack>
                   </View>
                 ))}
-              </View>
-            ))}
-          </View>
-        )}
-      </ScrollView>
-      <Button
-        title="Log Out and Retry"
-        onPress={() => {
-          setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Wyloguj.aspx' });
-          setGrades([]);
-          setIsHidden(false);
-        }}
-      />
+                </View>
+              </Collapsible>
+              
+            )}
+            <Button
+              title="Log Out and Retry"
+              onPress={() => {
+                setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Wyloguj.aspx' });
+                setGrades([]);
+                setIsHidden(false);
+                setDataLoadingProgress(0)
+              }}
+            />
+            {dataLoadingState == true ? 
+            <ThemedView style={{flex: 1}}>
+                <Text>Data is loading</Text>
+                <Progress key={0} value={dataLoadingProgress}>
+                  <Progress.Indicator animation="bouncy" />
+                </Progress>
+              </ThemedView>
+            : null}
+            </ThemedView>
+            
+            
+        </ScrollView>
+      </SafeAreaView>
+    </ThemedView>
+      
     </View>
   </View>
   )
@@ -185,7 +280,6 @@ return (
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    marginTop: 50,
   },
   webview: {
     flex: 1,
@@ -198,42 +292,46 @@ const styles = StyleSheet.create({
   },
   grades: {
     flex: 1,
-    flexDirection: 'column',
-    padding: 10,
   },
   gradesContainer: {
     flex: 1,
-    flexDirection: 'column',
   },
   headerText: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
   },
+  appBackground: {
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      flex: 1,
+      shadowColor: gradientColors[1],
+      shadowOffset: { width: 8, height: 0 },
+      shadowOpacity: 1,
+      shadowRadius: 100,
+      boxSizing: 'border-box',
+  },
   card: {
-    backgroundColor: '#fff',
-    padding: 10,
-    marginBottom: 10,
+    flex: 1,
+    gap: 5,
+
+  },
+  appContent: {
+    flex: 1,
+    paddingBottom: 49,
+  },
+  header: {
+    flex: 1,
+    backgroundColor: 'transparent',
+  },
+  grade: {
+    flex: 1,
+    backgroundColor: '#DAF9FF',
     borderRadius: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
-  },
-  semesterText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 5,
-  },
-  collapsible: {
-    marginBottom: 10,
-  },
-  subjectName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  subjectDetails: {
-    paddingLeft: 10,
-  },
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 5,
+  }
 });
