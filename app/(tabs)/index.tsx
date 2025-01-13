@@ -1,146 +1,64 @@
 import { Collapsible } from '@/components/Collapsible';
 import { ThemedView } from '@/components/ThemedView';
-import { gradientColors } from '@/constants/Colors';
+import { gradientColors, Colors } from '@/constants/Colors';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useEffect, useRef, useState } from 'react';
-import { StyleSheet, Platform, View, Text, Button} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { StyleSheet, Platform, View, Text, Switch, useColorScheme} from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import WebView from 'react-native-webview';
-import { Avatar, AvatarImage, Card, H1, H3, XStack, ScrollView, YStack, Progress, ProgressIndicator } from 'tamagui';
+import { Avatar, AvatarImage, Card, H1, H3, XStack, ScrollView, YStack, Progress, Button, ProgressIndicator } from 'tamagui';
+
+import { getGrades } from '@/components/scripts/grades'
+import { getMyInfo } from '@/components/scripts/personal_info'
+import { useTheme } from '@/components/ThemeProvider';
 
 export default function HomeScreen() {
+  const insets = useSafeAreaInsets();
 
-  const injectedJavaScript = `
-  console.log("-------------------------------------------------------------------------");
+  const { theme, toggleTheme } = useTheme();
 
-function showForms() {
-    var showAllForms = document.getElementsByClassName("mb-2")[0].getElementsByTagName("input")[0];
-    if (showAllForms.checked == false) {
-        showAllForms.checked = true;
-        var link = showAllForms.getAttribute("onclick");
-        eval(link);
-    }
-}
+  const [webViewSource, setWebViewSource] = useState({ uri: 'https://wu.pm.szczecin.pl/' });
+  const [grades, setGrades] = useState([]);
+  const [myInfo, setMyInfo] = useState({})
+  const [isHidden, setIsHidden] = useState(false);
+  const [dataLoadingState, setDataLoadingState] = useState(false)
+  const [dataLoadingProgress, setDataLoadingProgress] = useState(0)
+  const [dataLoadingStage, setDataLoadingStage] = useState(0) // 0 - grades, 0 - personal info
+  const [injectedJavaScript, setInjectedJavaScript] = useState(getGrades)
 
-function getGrades() {
-    grades = []
-    var showAllForms = document.getElementsByClassName("mb-2")[0].getElementsByTagName("input")[0];
-    var terms = document.getElementsByClassName("mb-4");
-    for (term of terms) {
-        var semesterHeader = term.getElementsByTagName("div")[0].getElementsByTagName("div")[0];
-        var semester = semesterHeader.getElementsByTagName("span")[0].textContent;
-        var structure = semesterHeader.getElementsByTagName("span")[1].textContent;
+  const [sideBarOpenState, setSideBarOpenState] = useState(false)
 
-        var subjects = term.getElementsByTagName("div")[0]
-            .getElementsByTagName("div")[1]
-            .getElementsByTagName("div")[0]
-            .getElementsByTagName("table")[0]
-            .getElementsByTagName("tbody")[0]
-            .querySelectorAll(":scope > tr");
+  const handleMessage = (event: { nativeEvent: { data: any; }; }) => {
+      const message = event.nativeEvent.data;
+      
+      if (message.startsWith('')) {
+        console.log("Got grades.")
+        switch (dataLoadingStage) {
+          case 0: {
+            setDataLoadingProgress(80)
+            // console.log('Message from WebView:', message);
+            setGrades(JSON.parse(message));
+            setIsHidden(true);
 
-        let subjectList = [];
-        for (let subject of subjects) {
-            if (
-                (subject.classList.contains("rgRow") || subject.classList.contains("rgAltRow")) &&
-                subject.classList.length == 1
-            ) {
-                var subjectName = subject.getElementsByTagName("td")[0].textContent;
-            } else {
-                var gradeTable = subject.querySelectorAll("table")[0];
-                var gradeHead = subject.querySelectorAll("thead")[0].querySelectorAll("tr")[0].querySelectorAll("th");
-                var gradeBody1 = subject.querySelectorAll("tbody")[0].querySelectorAll("tr");
-                let subjectTypeGrades = [];
-                for (var i = 0; i < gradeBody1.length; i++) {
-                    var gradeBody = subject.querySelectorAll("tbody")[0].querySelectorAll("tr")[i].querySelectorAll("td");
-                    var tempSubject = {};
-                    var subjectType = gradeBody1[i].firstChild.textContent;
-                    for (var j = 0; j < gradeHead.length; j++) {
-                        var colName;
-                        if (gradeHead[j].childElementCount == 0) {
-                            colName = gradeHead[j].textContent;
-                        } else {
-                            colName = gradeHead[j].querySelectorAll("span")[0].textContent;
-                        }
-                        tempSubject[colName.trim()] = gradeBody[j].textContent.trim();
-                    }
-                    subjectTypeGrades.push(tempSubject);
-                }
-                subjectList.push({
-                    SubjectName: subjectName,
-                    Subjects: subjectTypeGrades,
-                });
-            }
+            setDataLoadingStage(1)
+            setWebViewSource({uri: "https://wu.pm.szczecin.pl/wu/Wynik2.aspx"})
+            setInjectedJavaScript(getMyInfo)
+            break;
+          }
+          case 1: {
+            setDataLoadingProgress(100)
+            // console.log('Message from WebView:', message);
+            slowHideProgressBar()
+            setMyInfo(JSON.parse(message));
+
+            setDataLoadingStage(1)
+            break;
+          }
         }
-        grades.push({
-            Semester: semester,
-            Structure: structure,
-            Grades: subjectList,
-        });
-    }
-    return grades
-}
-// attemptToFetchGrades()
 
-function checkCollapse(callback) {
-    const maxWaitTime = 15000; // Total max wait time
-    const maxDelay = 10000; // Maximum delay between checks (10 seconds)
-    const minDelay = 500; // Initial delay (500ms)
-    const delayIncrement = 1.5; // Factor to increase the delay each time
-    let elapsedTime = 0;
-    let currentDelay = minDelay;
-
-    function checkTerms() {
-        const terms = Array.from(document.getElementsByClassName("mb-4"));
-        let allExpanded = true;
-
-        terms.forEach((term) => {
-            const termHeader = term.getElementsByTagName("div")[0].getElementsByTagName("div")[0];
-            if (termHeader && termHeader.classList.contains("header-collapsed")) {
-                termHeader.querySelector("a").click();
-                allExpanded = false; // At least one term is still collapsed
-            }
-        });
-
-        if (allExpanded) {
-            console.log("All terms are visible");
-            if (typeof callback === "function") callback(); // Trigger the callback only if all terms are expanded
-        } else if (elapsedTime >= maxWaitTime) {
-            console.log("Max wait time reached. Some terms are still collapsed.");
-        } else {
-            elapsedTime += currentDelay;
-            currentDelay = Math.min(currentDelay * delayIncrement, maxDelay); // Increment delay up to maxDelay
-            setTimeout(checkTerms, currentDelay); // Re-check after the updated delay
-        }
-    }
-
-    checkTerms(); // Start the checking loop
-}
-showForms()
-checkCollapse(() => {
-    window.ReactNativeWebView.postMessage(JSON.stringify(getGrades()));
-})
-  `;
-
-const webViewRef = useRef<WebView>(null);
-const [webViewSource, setWebViewSource] = useState({ uri: 'https://wu.pm.szczecin.pl/' });
-const [grades, setGrades] = useState([]);
-const [isHidden, setIsHidden] = useState(false);
-const [dataLoadingState, setDataLoadingState] = useState(false)
-const [dataLoadingProgress, setDataLoadingProgress] = useState(0)
-
-const handleMessage = (event: { nativeEvent: { data: any; }; }) => {
-    const message = event.nativeEvent.data;
-    
-    if (message.startsWith('[')) {
-      console.log("Got grades.")
-      setDataLoadingProgress(100)
-      // console.log('Message from WebView:', message);
-      slowHideProgressBar()
-      setGrades(JSON.parse(message));
-      setIsHidden(true);
-    }
-    
-};
+      }
+      
+  };
 
 const slowHideProgressBar = () => {
   setTimeout(() => {
@@ -155,125 +73,167 @@ const progressStages = {
   "https://wu.pm.szczecin.pl/WU/Grades.aspx": 60,
 }
   
-  
+  const colorTheme = useMemo(() =>
+  StyleSheet.create({
+    default: {
+      backgroundColor: Colors[theme.dark ? "dark" : "light"]["background"],
+      
+    },
+    defaultColor: {
+      color: Colors[theme.dark ? "dark" : "light"]["text"]
+    }
+  }), [theme]);
 
 
-return (
-  <View style = {styles.root}>
-    <SafeAreaView style={!isHidden ? styles.webview : styles.hidden}>
-      <WebView
-        ref={webViewRef}
-        source={webViewSource}
-        javaScriptEnabled={true}
-        onMessage={handleMessage}
-        injectedJavaScript={injectedJavaScript}
-        onLoadStart={(state) => {
-          const { nativeEvent } = state
-          const url = nativeEvent.url
+  return (
+    <View style = {styles.root}>
+      <SafeAreaView style={!isHidden ? styles.webview : styles.hidden}>
+        <WebView
+          source={webViewSource}
+          javaScriptEnabled={true}
+          onMessage={handleMessage}
+          injectedJavaScript={injectedJavaScript}
+          onLoadStart={(state) => {
+            const { nativeEvent } = state
+            const url = nativeEvent.url
 
-          if (dataLoadingState == true) {
-            if (progressStages.hasOwnProperty(nativeEvent.url)) {
-              setDataLoadingProgress(Number(progressStages[nativeEvent.url as keyof typeof progressStages]))
+            if (dataLoadingState == true) {
+              if (progressStages.hasOwnProperty(url)) {
+                setDataLoadingProgress(Number(progressStages[url as keyof typeof progressStages]))
+              }
+            }
+            if (url == "https://wu.pm.szczecin.pl/wu/" && dataLoadingStage == 0) {
+              setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
+            }
+            if (url == "https://idp.pm.szczecin.pl/o365") {
+              setIsHidden(true)
+              setDataLoadingState(true)
+              console.log("Loading grades...")
             }
           }
-          if (nativeEvent.url == "https://wu.pm.szczecin.pl/wu/") {
-            setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
-          }
-          if (nativeEvent.url == "https://idp.pm.szczecin.pl/o365") {
-            setIsHidden(true)
-            setDataLoadingState(true)
-            console.log("Loading grades...")
-          }
-        }
 
-        }
-        onNavigationStateChange={(navState) => {
-
-          if (navState.url == "https://wu.pm.szczecin.pl/WU/Pusta.aspx") {
-            console.log("changing urls..")
-            setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
           }
-        }}
-      />
-     </SafeAreaView>
-    <View style={isHidden ? styles.grades : styles.hidden}>
-      
-      
-      <ThemedView style={styles.appBackground}>
-      <LinearGradient
-        colors={gradientColors}
-        style={styles.appBackground}
-      />
-      <SafeAreaView style={styles.appContent}>
-        <ScrollView> 
-          <XStack margin={10} justifyContent='space-between' alignItems='center'>
-            <H1 style={{fontSize: 32, fontWeight: 'bold'}}>
-              Hi, Stella
-            </H1>
-            <Avatar circular size={48} style={{borderWidth: 3, borderColor: 'white'}}>
-              <AvatarImage
-                src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
-              />
-            </Avatar>
-          </XStack>
-          <H3 style={{marginLeft: 10, fontSize: 18, fontWeight: 'bold'}}>Your grades</H3>
-          <ThemedView style={{backgroundColor: "white", borderRadius: 20, padding: 5, minHeight: "150%"}}>
-            {grades.map((semester, index) => 
-              <Collapsible title={semester.Semester} key={index}>
-                <View style={styles.card}>
-                {semester.Grades.map((subject, index) => (
-                  <View key={index} style={styles.grade}>
-                    <XStack>
-                      <YStack flex={2}>
-                        <H3 style={{ fontSize: 16, lineHeight: 30}}>{subject.SubjectName}</H3>
-                        <H3 style={{ fontSize: 14, color: "gray", lineHeight: 20}}>Punkty ECTS: {subject.Subjects[subject.Subjects.length - 1]["Punkty ECTS"]}</H3>
-                        <XStack alignItems='center' marginTop={20} gap={5}>
-                          <Avatar circular size={24}>
-                            <AvatarImage
-                              src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
-                            />
-                          </Avatar>
-                          <H3 style={{ lineHeight: 30, fontSize: 14, color: "gray"}}>
-                            {subject.Subjects[subject.Subjects.length - 1]["Prowadzący"]}
-                          </H3>
-                        </XStack>
-                      </YStack>
-                      <YStack flex={1} justifyContent='center' alignItems='center'>
-                        <H3 style={{ lineHeight: 70, fontSize: 64, fontStyle: "semibold"}}>{parseFloat(subject.Subjects[subject.Subjects.length - 1]["Termin I"].replace(",", "."))}</H3>
-                      </YStack>
-                    </XStack>
-                  </View>
-                ))}
-                </View>
-              </Collapsible>
-              
-            )}
-            <Button
-              title="Log Out and Retry"
-              onPress={() => {
-                setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Wyloguj.aspx' });
-                setGrades([]);
-                setIsHidden(false);
-                setDataLoadingProgress(0)
-              }}
-            />
-            {dataLoadingState == true ? 
-            <ThemedView style={{flex: 1}}>
-                <Text>Data is loading</Text>
-                <Progress key={0} value={dataLoadingProgress}>
-                  <Progress.Indicator animation="bouncy" />
-                </Progress>
-              </ThemedView>
-            : null}
-            </ThemedView>
-            
-            
-        </ScrollView>
+          onNavigationStateChange={(navState) => {
+            const url = navState.url
+            if (url == "https://wu.pm.szczecin.pl/WU/Pusta.aspx") {
+              console.log("changing urls..")
+              setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Grades.aspx' });
+            }
+          }}
+        />
       </SafeAreaView>
-    </ThemedView>
-      
+      <View style={isHidden ? styles.grades : styles.hidden}>    
+        <ThemedView style={styles.appBackground}>
+        <LinearGradient
+          colors={gradientColors}
+          style={styles.appBackground}
+        />
+        <SafeAreaView style={styles.appContent}>
+          {sideBarOpenState &&
+          <ScrollView style={[styles.sideBar, colorTheme.default,{
+            right: insets.right, top: insets.top,
+
+            }]}>
+            <Button onPress={() => {setSideBarOpenState(false)}}>Close sideBar</Button>
+            <Button
+                onPress={() => {
+                  setSideBarOpenState(false)
+                  setWebViewSource({ uri: 'https://wu.pm.szczecin.pl/WU/Wyloguj.aspx' });
+                  setGrades([]);
+                  setIsHidden(false);
+                  setDataLoadingProgress(0)
+                  setDataLoadingStage(0)
+                  setInjectedJavaScript(getGrades)
+                }}
+              > Logout </Button>
+              <Text>Dark Mode: {theme.dark ? 'Enabled' : 'Disabled'}</Text>
+              <Switch
+                value={theme.dark ? true : false}
+                onValueChange={toggleTheme}
+              />
+              {Object.keys(myInfo).map((key, index) => 
+                <H3 key={index}>{key}:{myInfo[key]}</H3>
+              )}
+          </ScrollView>
+          }
+          <ScrollView> 
+            <XStack margin={10} justifyContent='space-between' alignItems='center'>
+              <H1 style={[colorTheme.defaultColor,{fontSize: 32, fontWeight: 'bold'}]}> Hi,
+                {Object.keys(myInfo).length > 0 ?
+                  " " + myInfo.imie
+                :
+                " Stella"
+                }
+              </H1>
+              <Avatar circular size={48} asChild
+                style={{borderWidth: 3, borderColor: 'white'}}>
+                <Button
+                  onPress={() => {
+                    setSideBarOpenState(true)
+                  }}
+                  backgroundColor="transparent"
+                  padding={0}
+                  borderWidth={0}
+                >
+                <AvatarImage
+                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
+                />
+                </Button>
+                
+              </Avatar>
+            </XStack>
+            <H3 style={{marginLeft: 10, fontSize: 18, fontWeight: 'bold'}}>Your grades</H3>
+            <ThemedView style={[colorTheme.default, {borderRadius: 20, padding: 5, minHeight: "150%"}]}>
+              {grades.map((semester, index) => 
+                <Collapsible title={semester.Semester} key={index} style={colorTheme.default}>
+                  <View style={[styles.card, colorTheme.default]}>
+                  {semester.Grades.map((subject, index) => (
+                    <View key={index} style={styles.grade}>
+                      <XStack>
+                        <YStack flex={2}>
+                          <H3 style={{ fontSize: 16, lineHeight: 30}}>{subject.SubjectName}</H3>
+                          <H3 style={{ fontSize: 14, color: "gray", lineHeight: 20}}>Punkty ECTS: {subject.Subjects[subject.Subjects.length - 1]["Punkty ECTS"]}</H3>
+                          <XStack alignItems='center' marginTop={20} gap={5}>
+                            <Avatar circular size={24}>
+                              <AvatarImage
+                                src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
+                              />
+                            </Avatar>
+                            <H3 style={{ lineHeight: 30, fontSize: 14, color: "gray"}}>
+                              {subject.Subjects[subject.Subjects.length - 1]["Prowadzący"]}
+                            </H3>
+                          </XStack>
+                        </YStack>
+                        <YStack flex={1} justifyContent='center' alignItems='center'>
+                          <H3 style={{ lineHeight: 70, fontSize: 64, fontStyle: "semibold"}}>
+                            {!Number.isNaN(parseFloat(subject.Subjects[subject.Subjects.length - 1]["Termin I"].replace(",", "."))) ? parseFloat(subject.Subjects[subject.Subjects.length - 1]["Termin I"].replace(",", ".")) : "0"}
+                          </H3>
+                        </YStack>
+                      </XStack>
+                    </View>
+                  ))}
+                  </View>
+                </Collapsible>
+                
+              )}
+              
+              {dataLoadingState == true ? 
+              <ThemedView style={{flex: 1}}>
+                  <Text>Data is loading</Text>
+                  <Progress key={0} value={dataLoadingProgress}>
+                    <Progress.Indicator animation="bouncy" />
+                  </Progress>
+                </ThemedView>
+              : null}
+              </ThemedView>
+              
+              
+          </ScrollView>
+        </SafeAreaView>
+      </ThemedView>
+        
+      </View>
     </View>
-  </View>
   )
 }
 
@@ -333,5 +293,17 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 5,
-  }
+  },
+  sideBar: {
+    position: "absolute",
+    alignSelf: "flex-end",
+    width: 300,
+    minHeight: "100%",
+    zIndex: 3,
+    top: 0,
+    padding: 20,
+    borderBottomLeftRadius: 20,
+    borderTopLeftRadius: 20,
+    gap: 5,
+  },
 });
