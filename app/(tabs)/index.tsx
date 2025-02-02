@@ -92,7 +92,7 @@ const progressStages = {
           source={webViewSource}
           javaScriptEnabled={true}
           onMessage={handleMessage}
-          injectedJavaScript={injectedJavaScript}
+          // injectedJavaScript={injectedJavaScript}
           onLoadStart={(state) => {
             const { nativeEvent } = state
             const url = nativeEvent.url

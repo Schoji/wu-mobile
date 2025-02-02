@@ -15,5 +15,5 @@ export const getMyInfo = `
     var nazwisko = imienazwisko.split(" ")[1]
     myData["imie"] = imie
     myData["nazwisko"] = nazwisko
-    window.ReactNativeWebView.postMessage(JSON.stringify(myData));
+    window.ReactNativeWebView.postMessage(JSON.stringify({"MyInfo" : myData}));
   `
