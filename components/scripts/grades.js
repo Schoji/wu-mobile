@@ -67,7 +67,7 @@ export const getGrades = `
             }
             subjectList.push({
               SubjectName: subjectName,
-              Subjects: subjectTypeGrades,
+              Records: subjectTypeGrades,
             });
           }
         }
@@ -129,18 +129,24 @@ export const getGrades = `
     }
   }
 
+  let statusInterval = setInterval(() => {
+    window.ReactNativeWebView.postMessage(JSON.stringify({ Info: "getGrades is still running." }));
+  }, 5000);
+
   showForms();
   checkCollapse(() => {
     try {
       const gradesData = getGrades();
       console.log("Sending grades data to React Native...");
+      clearInterval(statusInterval); // Stop sending status updates
       window.ReactNativeWebView.postMessage(JSON.stringify({ MyGrades: gradesData }));
     } catch (error) {
       console.error("Error while sending grades:", error);
+      clearInterval(statusInterval);
       window.ReactNativeWebView.postMessage(JSON.stringify({ error: "Error while sending grades: " + error.message }));
     }
   });
 
   console.log("Script execution finished.");
   console.log("-------------------------------------------------------------------------");
-`;
+`

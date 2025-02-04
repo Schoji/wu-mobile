@@ -4,17 +4,21 @@ import { getGrades } from "./scripts/grades";
 import { getMyInfo } from "./scripts/personal_info";
 import { getMyStudies } from "./scripts/studies_profile";
 import { getMyTimetable } from "./scripts/timetables";
+import { getMyLecturers} from "./scripts/lecturers";
 import { Button, View } from "react-native";
+import { ThemedText } from "./ThemedText";
+
 
 export default function LoginScreen({ messageHandler }) {
+    
 
     // List of URLs that are considered University URLs
     const UniversityURLs = [
         "https://wu.pm.szczecin.pl/WU/Grades.aspx", // My grades
         "https://wu.pm.szczecin.pl/WU/Wynik2.aspx", // My data
-        // "https://wu.pm.szczecin.pl/WU/Prowadzacy.aspx", // My lecturers
+        "https://wu.pm.szczecin.pl/WU/Prowadzacy.aspx", // My lecturers
         "https://wu.pm.szczecin.pl/WU/TokStudiow.aspx", // My studies information
-        "https://plany.am.szczecin.pl/Plany/ZnajdzTok?Ukryj=True", // My timetable
+        // "https://plany.am.szczecin.pl/Plany/ZnajdzTok?Ukryj=True", // My timetable
     ]
 
     const headers = {
@@ -22,7 +26,8 @@ export default function LoginScreen({ messageHandler }) {
     }
 
     const JavaScriptExecutables = [
-        getGrades, getMyInfo, getMyStudies, getMyTimetable
+        getGrades, getMyInfo, getMyLecturers, getMyStudies,
+        //  getMyTimetable,
     ]
 
     const [webViewUrl, setWebViewUrl] = useState({ uri: UniversityURLs[0], headers: headers });
@@ -38,7 +43,8 @@ export default function LoginScreen({ messageHandler }) {
             console.log("Error parsing message: " + error);
             return null;
         }
-        console.log(message);
+        console.log(performance.now())
+        // console.log(message);
         var messageType = Object.keys(parsedMessage)[0]
         console.log(messageType);
         switch (messageType) {
@@ -54,10 +60,16 @@ export default function LoginScreen({ messageHandler }) {
                 setInjectedJavaScript(JavaScriptExecutables[2])
                 break;
             }
-            case "MyStudies": {
-                console.log("Studies info received!")
+            case "MyLecturers": {
                 setWebViewUrl({ uri: UniversityURLs[3], headers: headers });
                 setInjectedJavaScript(JavaScriptExecutables[3])
+                // messageHandler(parsedMessage)
+                break;
+            }
+            case "MyStudies": {
+                console.log("Studies info received!")
+                // setWebViewUrl({ uri: UniversityURLs[4], headers: headers });
+                // setInjectedJavaScript(JavaScriptExecutables[4])
                 break;
             }
             case "MyTimetable": {
@@ -66,12 +78,16 @@ export default function LoginScreen({ messageHandler }) {
                 messageHandler(parsedMessage)
                 break;
             }
-            case "Error:": {
-                console.log("Error from:", webViewUrl,  parsedMessage[messageType]);
+            case "Info" : {
+                console.log("Info from:", webViewUrl.uri, parsedMessage[messageType]);
+                break;
+            }
+            case "error:": {
+                console.log("Error from:", webViewUrl.uri, parsedMessage[messageType]);
                 break;
             }
             default: {
-                console.log("Unknown message type: " + messageType)
+                console.log("Unknown message type: " + messageType + ":" + message);
             }
         }
         
@@ -89,16 +105,14 @@ export default function LoginScreen({ messageHandler }) {
             setInjectedJavaScript(JavaScriptExecutables[0])
         }
 
-        console.log(url)
-
         if (url.includes("https://login.microsoftonline.com")) {
             console.log("User was not logged in, waiting for user to log in");
             return;
         }
         if (url.includes("https://plany.am.szczecin.pl/Plany/ZnajdzTok?")) {
             console.log("User is already searching for his timetable");
-            if (injectedJavaScript != JavaScriptExecutables[3]) {
-                setInjectedJavaScript(JavaScriptExecutables[3])
+            if (injectedJavaScript != JavaScriptExecutables[4]) {
+                setInjectedJavaScript(JavaScriptExecutables[4])
             }
         }
 
@@ -111,31 +125,31 @@ export default function LoginScreen({ messageHandler }) {
             }
                 
             case "https://plany.am.szczecin.pl/Plany/ZnajdzTok?Ukryj=True": {
-                if (injectedJavaScript != JavaScriptExecutables[3]) {
-                    setInjectedJavaScript(JavaScriptExecutables[3])
+                if (injectedJavaScript != JavaScriptExecutables[4]) {
+                    setInjectedJavaScript(JavaScriptExecutables[4])
                     break;
                 }
             }
         }
-        console.log("Reload")
     }
 
+    const Logout = () => {
+        setWebViewUrl({ uri: "https://wu.pm.szczecin.pl/WU/Wyloguj.aspx", headers: headers });
+        setInjectedJavaScript("")
+    }
 
     return (
         <View style={{ flex: 1 }}>
             <WebView
                 source={webViewUrl}
                 javaScriptEnabled={true}
-                onLoadStart={(state) => checkUrl(state)}
+                onLoadEnd={(state) => checkUrl(state)}
                 injectedJavaScript={injectedJavaScript}
                 onMessage={handleMessage}
             />
-            <View style={{height: 100}}>
-                <Button title="Logout" onPress={() => {
-                    setWebViewUrl({ uri: "https://wu.pm.szczecin.pl/WU/Wyloguj.aspx", headers: headers });
-                    setInjectedJavaScript(JavaScriptExecutables[0])
-                    setWebViewUrl({ uri: UniversityURLs[0], headers: headers });
-                }}/>
+            <View style={{height: 200}}>
+                <Button title="Logout" onPress={Logout}/>
+                <ThemedText>{injectedJavaScript}</ThemedText>
             </View>
         </View>
     )

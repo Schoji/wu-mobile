@@ -7,7 +7,7 @@ export const getMyTimetable =
             const day = String(date.getDate()).padStart(2, '0');
             const month = String(date.getMonth() + 1).padStart(2, '0');
             const year = date.getFullYear();
-            return \`\${day}.\${month}.\${year}\`;
+            return day + "." + month + "." + year;
         }
 
         var studentInfo = {
@@ -47,18 +47,21 @@ export const getMyTimetable =
             let now = new Date();
             let future = new Date(now);
             let past = new Date();
-            past.setFullYear(2025, 0, 27)
+            past.setFullYear(2025, 0, 13)
             future.setDate(future.getDate() + 7);
 
             
             let past_str = formatDate(past);
             let future_str = formatDate(future);
             console.log(past)
-
+            for (radio of document.querySelectorAll("input[type='radio']")) {
+                if (radio.checked) {
+                    radio.checked = false
+                }
+            }
             document.getElementById("DataDo_I").value = future_str;
             document.getElementById("DataOd_I").value = past_str;
             document.getElementById("SzukajLogout").click();
-            document.getElementById("RadioList_Termin1").click();
 
             var timetable = [];
             var dateHeader = "";

@@ -7,16 +7,11 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { createTamagui, TamaguiProvider } from 'tamagui';
-import defaultConfig from '@tamagui/config/v3';
-
-const config = createTamagui(defaultConfig)
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <TamaguiProvider config={config}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -46,6 +41,5 @@ export default function TabLayout() {
           }}
         />
       </Tabs>
-    </TamaguiProvider>
   );
 }
