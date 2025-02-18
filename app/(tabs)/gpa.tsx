@@ -11,7 +11,7 @@ import ScholarshipsPreview from '@/components/ScholarshipsPreview';
 import LecturersPreview from '@/components/LecturersPreview';
 import EndPreview from '@/components/EndPreview';
 
-export default function HomeScreen() {
+export default function GPA() {
 
   // const { theme, toggleTheme } = useTheme();
 
@@ -19,10 +19,6 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.root}>
       <ScrollView contentContainerStyle={{paddingBottom: 80}} bounces={false}>
         <Greeter/>
-        <GradesPreview/>
-        <GpaPreview/>
-        <SchedulePreview/>
-        <ScholarshipsPreview/>
         <LecturersPreview/>
         <EndPreview/>
       </ScrollView>

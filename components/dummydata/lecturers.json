@@ -1,0 +1,379 @@
+{
+    "MyLecturers": [
+        {
+            "Semestr 3 - zimowy 2024/2025": [
+                {
+                    "Przedmiot": "Język angielski",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr Katarzyna Zawadzka"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr Katarzyna Zawadzka"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Matematyka dyskretna",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Metody numeryczne",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "dr hab. inż. Marek Landowski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Metody probabilistyczne i statystyka w informatyce",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr hab. Piotr Borkowski"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "dr hab. Piotr Borkowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr hab. Piotr Borkowski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Programowanie obiektowe",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Aleksander Wolak"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Sieci komputerowe",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "mgr inż. Janusz Magaj"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr inż. Janusz Magaj"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Marcin Breitsprecher"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Struktury danych",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Gerard Wawrzyniak"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Gerard Wawrzyniak"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Filip Majewski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Wychowanie fizyczne",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr Norbert Marchewka"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr Norbert Marchewka"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Semestr 2 - letni 2023/2024": [
+                {
+                    "Przedmiot": "Algebra liniowa",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr Sylwia Mielniczuk"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "mgr Kinga Kuzioła"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr Sylwia Mielniczuk"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Architektura systemów komputerowych",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "mgr inż. Marcin Breitsprecher"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr inż. Marcin Breitsprecher"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Janusz Magaj"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Elektronika",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Piotr Majzner"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Piotr Majzner"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. kpt.ż.w. Wiesław Salmonowicz"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Język angielski",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr Katarzyna Zawadzka"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr Katarzyna Zawadzka"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Metody programowania",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Leszek Misztal"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Leszek Misztal"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Mateusz Raciborski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Systemy operacyjne",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Aleksander Wolak"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Wychowanie fizyczne",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "mgr Norbert Marchewka"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr Norbert Marchewka"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Semestr 1 - zimowy 2023/2024": [
+                {
+                    "Przedmiot": "Analiza matematyczna",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr Anna Pańka"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "mgr Kinga Kuzioła"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr Anna Pańka"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Fizyka",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr Agata Kowalska"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "dr Agata Kowalska"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr Agata Kowalska"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Agnieszka Szczepaniec"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Innowacyjne projekty informatyczne",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. kpt.ż.w. Piotr Wołejsza"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. kpt.ż.w. Piotr Wołejsza"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Podstawy organizacji i zarządzania",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "kmdr por. mgr inż. Dariusz Stachowiak"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "kmdr por. mgr inż. Dariusz Stachowiak"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Problemy zawodowe i prawne informatyki",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Łukasz Nozdrzykowski"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Psychologia zachowań ludzkich",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Patrycja Narękiewicz"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Patrycja Narękiewicz"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Wstęp do algorytmizacji",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr Tomasz Wierenko"
+                        },
+                        {
+                            "Forma zajęć": "Ćwiczenia",
+                            "Prowadzący": "dr Tomasz Wierenko"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr Tomasz Wierenko"
+                        }
+                    ]
+                },
+                {
+                    "Przedmiot": "Wstęp do programowania",
+                    "Forma zajęć": [
+                        {
+                            "Forma zajęć": "Audytorium",
+                            "Prowadzący": "dr inż. Leszek Misztal"
+                        },
+                        {
+                            "Forma zajęć": "Końcowa",
+                            "Prowadzący": "dr inż. Leszek Misztal"
+                        },
+                        {
+                            "Forma zajęć": "Laboratorium",
+                            "Prowadzący": "mgr inż. Filip Majewski"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

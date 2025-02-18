@@ -1,1437 +1,714 @@
 {
     "MyGrades": [
         {
-            "Semester": "Semestr 3 - zimowy 2024/2025",
-            "Structure": "Struktura: WIiT - I - Ist - S",
-            "Grades": [
+            "Semestr": "Semestr 3 - zimowy 2024/2025",
+            "Struktura": "Struktura: WIiT - I - Ist - S",
+            "Oceny": [
                 {
-                    "SubjectName": "Język angielski",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Język angielski",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Katarzyna Zawadzka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "60",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr Katarzyna Zawadzka",
                             "Punkty ECTS": "2",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "2"
                 },
                 {
-                    "SubjectName": "Wychowanie fizyczne",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Wychowanie fizyczne",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Norbert Marchewka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr Norbert Marchewka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "0"
                 },
                 {
-                    "SubjectName": "Matematyka dyskretna",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Matematyka dyskretna",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "0",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "7",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 },
                 {
-                    "SubjectName": "Struktury danych",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Struktury danych",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr inż. Gerard Wawrzyniak",
                             "Punkty ECTS": "0",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Filip Majewski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Gerard Wawrzyniak",
                             "Punkty ECTS": "3",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "3"
                 },
                 {
-                    "SubjectName": "Metody numeryczne",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Metody numeryczne",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr hab. inż. Marek Landowski",
                             "Punkty ECTS": "3",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "3"
                 },
                 {
-                    "SubjectName": "Programowanie obiektowe",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Programowanie obiektowe",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "0",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "60",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,5"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Aleksander Wolak",
                             "Punkty ECTS": "0",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "4",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "4"
                 },
                 {
-                    "SubjectName": "Sieci komputerowe",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Sieci komputerowe",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "mgr inż. Janusz Magaj",
                             "Punkty ECTS": "0",
-                            "Punkty ECTS za ostatnią ocenę": "0",
+                            "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Marcin Breitsprecher",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "0",
-                            "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Liczba godzin": "30"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr inż. Janusz Magaj",
                             "Punkty ECTS": "4",
                             "Punkty ECTS za ostatnią ocenę": "0",
-                            "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Liczba godzin": "0"
                         }
-                    ]
+                    ],
+                    "ECTS": "4"
                 },
                 {
-                    "SubjectName": "Metody probabilistyczne i statystyka w informatyce",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Metody probabilistyczne i statystyka w informatyce",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr hab. Piotr Borkowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr hab. Piotr Borkowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr hab. Piotr Borkowski",
                             "Punkty ECTS": "7",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 }
             ]
         },
         {
-            "Semester": "Semestr 2 - letni 2023/2024",
-            "Structure": "Struktura: WIiT - I - Ist - S",
-            "Grades": [
+            "Semestr": "Semestr 2 - letni 2023/2024",
+            "Struktura": "Struktura: WIiT - I - Ist - S",
+            "Oceny": [
                 {
-                    "SubjectName": "Język angielski",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Język angielski",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Katarzyna Zawadzka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "60",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr Katarzyna Zawadzka",
                             "Punkty ECTS": "2",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "2"
                 },
                 {
-                    "SubjectName": "Wychowanie fizyczne",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Wychowanie fizyczne",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Norbert Marchewka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr Norbert Marchewka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "0"
                 },
                 {
-                    "SubjectName": "Algebra liniowa",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Algebra liniowa",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "mgr Sylwia Mielniczuk",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Kinga Kuzioła",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr Sylwia Mielniczuk",
                             "Punkty ECTS": "7",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 },
                 {
-                    "SubjectName": "Elektronika",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Elektronika",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr inż. Piotr Majzner",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. kpt.ż.w. Wiesław Salmonowicz",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Piotr Majzner",
                             "Punkty ECTS": "4",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "4"
                 },
                 {
-                    "SubjectName": "Metody programowania",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Metody programowania",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr inż. Leszek Misztal",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Mateusz Raciborski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Leszek Misztal",
                             "Punkty ECTS": "6",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "6"
                 },
                 {
-                    "SubjectName": "Architektura systemów komputerowych",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Architektura systemów komputerowych",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "mgr inż. Marcin Breitsprecher",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "45",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Janusz Magaj",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "mgr inż. Marcin Breitsprecher",
                             "Punkty ECTS": "5",
                             "Punkty ECTS za ostatnią ocenę": "60",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "3,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "5"
                 },
                 {
-                    "SubjectName": "Systemy operacyjne",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Systemy operacyjne",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Aleksander Wolak",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "6",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "6"
                 }
             ]
         },
         {
-            "Semester": "Semestr 1 - zimowy 2023/2024",
-            "Structure": "Struktura: WIiT - I - Ist - S",
-            "Grades": [
+            "Semestr": "Semestr 1 - zimowy 2023/2024",
+            "Struktura": "Struktura: WIiT - I - Ist - S",
+            "Oceny": [
                 {
-                    "SubjectName": "Psychologia zachowań ludzkich",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Psychologia zachowań ludzkich",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr inż. Patrycja Narękiewicz",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Patrycja Narękiewicz",
                             "Punkty ECTS": "1",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "1"
                 },
                 {
-                    "SubjectName": "Podstawy organizacji i zarządzania",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Podstawy organizacji i zarządzania",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "kmdr por. mgr inż. Dariusz Stachowiak",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "kmdr por. mgr inż. Dariusz Stachowiak",
                             "Punkty ECTS": "1",
                             "Punkty ECTS za ostatnią ocenę": "50",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "3,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "1"
                 },
                 {
-                    "SubjectName": "Problemy zawodowe i prawne informatyki",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Problemy zawodowe i prawne informatyki",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Łukasz Nozdrzykowski",
                             "Punkty ECTS": "2",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "2"
                 },
                 {
-                    "SubjectName": "Analiza matematyczna",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Analiza matematyczna",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr Anna Pańka",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr Kinga Kuzioła",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "45",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr Anna Pańka",
                             "Punkty ECTS": "7",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 },
                 {
-                    "SubjectName": "Fizyka",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Fizyka",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr Agata Kowalska",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "60",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "3,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,5"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr Agata Kowalska",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Agnieszka Szczepaniec",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr Agata Kowalska",
                             "Punkty ECTS": "7",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 },
                 {
-                    "SubjectName": "Wstęp do programowania",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Wstęp do programowania",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "E",
                             "Prowadzący": "dr inż. Leszek Misztal",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "80",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "4,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,5"
                         },
                         {
                             "Forma zajęć": "L",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "mgr inż. Filip Majewski",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. Leszek Misztal",
                             "Punkty ECTS": "7",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "7"
                 },
                 {
-                    "SubjectName": "Wstęp do algorytmizacji",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Wstęp do algorytmizacji",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr Tomasz Wierenko",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "60",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "3,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,5"
                         },
                         {
                             "Forma zajęć": "C",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr Tomasz Wierenko",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "70",
                             "Liczba godzin": "15",
-                            "Zaliczony": "",
-                            "Termin I": "4,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "4,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr Tomasz Wierenko",
                             "Punkty ECTS": "3",
                             "Punkty ECTS za ostatnią ocenę": "60",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "3,5",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "3,5"
                         }
-                    ]
+                    ],
+                    "ECTS": "3"
                 },
                 {
-                    "SubjectName": "Innowacyjne projekty informatyczne",
-                    "Records": [
+                    "NazwaPrzedmiotu": "Innowacyjne projekty informatyczne",
+                    "Rekordy": [
                         {
                             "Forma zajęć": "A",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "Z",
                             "Prowadzący": "dr inż. kpt.ż.w. Piotr Wołejsza",
                             "Punkty ECTS": "0",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "30",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         },
                         {
                             "Forma zajęć": "K",
-                            "Typ przedmiotu": "",
-                            "Podtyp przedmiotu": "",
                             "Forma zaliczenia": "KO",
                             "Prowadzący": "dr inż. kpt.ż.w. Piotr Wołejsza",
                             "Punkty ECTS": "2",
                             "Punkty ECTS za ostatnią ocenę": "90",
                             "Liczba godzin": "0",
-                            "Zaliczony": "",
-                            "Termin I": "5,0",
-                            "Poprawkowy": "",
-                            "Komis": "",
-                            "Pow. przedm. I": "",
-                            "Pow. przedm. II": "",
-                            "Powt. przedm. poprawka": "",
-                            "Powt. przedm. komis": "",
-                            "Komis dziekański": "",
-                            "Powt. przedm. II poprawka": "",
-                            "Powt. przedm. II komis": ""
+                            "Termin I": "5,0"
                         }
-                    ]
+                    ],
+                    "ECTS": "2"
                 }
             ]
         }
